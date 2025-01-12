@@ -7,7 +7,6 @@ function App() {
 
   return (
     <Grid
-      // container
       sx={{
         height: '100vh',
         width: '100%'

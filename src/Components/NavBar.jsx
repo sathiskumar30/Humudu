@@ -5,8 +5,6 @@ const NavBar = () => {
 
     const [selectedPage, setSelectedPage] = useState(1);
 
-    console.log(selectedPage, 'This is the selected Page')
-
     const NavOptionsData = ['Home', 'Create a Frame', 'Order History']
 
     return (
@@ -17,9 +15,8 @@ const NavBar = () => {
                 height: '100%',
                 width: '100%',
                 display: 'flex',
-                // justifyContent:'center',
                 alignItems: 'center',
-                borderBottom: '1px solid black', ///Ipothiku irukatum change panniru da Sathis uh . . . . 
+                borderBottom: '1px solid black',
                 px: 3,
             }}
         >

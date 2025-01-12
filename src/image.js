@@ -5,7 +5,6 @@ import GodThree from './assets/Images/Gods/GODThree.png';
 import GodFour from './assets/Images/Gods/GODFour.png';
 
 // Import all Frame images
-import FrameOne from './assets/Images/Frames/FrameOne.png';
 import FrameTwo from './assets/Images/Frames/FrameTwo.png';
 import FrameThree from './assets/Images/Frames/FrameThree.png';
 import FrameFour from './assets/Images/Frames/FrameFour.png';
@@ -18,44 +17,41 @@ import FinishThree from './assets/Images/Finish/FinishThree.jpg';
 import FinishFour from './assets/Images/Finish/FinishFour.jpg';
 
 // Import all Accessories
-import CornerOne from './assets/Images/Accessories/CornerOne.png';
-import LampOne from './assets/Images/Accessories/LampOne.png';
-import LampTwo from './assets/Images/Accessories/LampTwo.png';
+import LampTwo from './assets/Images/Accessories/LampOne.png';
+import LampOne from './assets/Images/Accessories/LampTwo.png';
 
 // Function to map images into an array of objects
 const mapImages = (images) => {
-    return images.map(({ key, value }) => ({ key, src: value }));
+    return images.map(({ key, value , name }) => ({ key, src: value , name }));
   };
   
   // Map God images
   export const GodImages = mapImages([
-    { key: 'GodOne', value: GodOne },
-    { key: 'GodTwo', value: GodTwo },
-    { key: 'GodThree', value: GodThree },
-    { key: 'GodFour', value: GodFour },
+    { key: 'GodOne', value: GodOne , name :'Kali' },
+    { key: 'GodTwo', value: GodTwo ,name :'Brhma' },
+    { key: 'GodThree', value: GodThree , name :'Vishnu' },
+    { key: 'GodFour', value: GodFour , name : 'Vinayaga' },
   ]);
   
   // Map Frame images
   export const FrameImages = mapImages([
-    { key: 'FrameOne', value: FrameOne },
-    { key: 'FrameTwo', value: FrameTwo },
-    { key: 'FrameThree', value: FrameThree },
-    { key: 'FrameFour', value: FrameFour },
-    { key: 'FrameFive', value: FrameFive },
+    { key: 'FrameTwo', value: FrameTwo , name : 'Formal Finish' },
+    { key: 'FrameThree', value: FrameThree , name : 'Plain Finish' },
+    { key: 'FrameFour', value: FrameFour ,  name : 'Wood Finish' },
+    { key: 'FrameFive', value: FrameFive , name : 'Classy Finish' },
   ]);
   
   // Map Finish images
   export const FinishImages = mapImages([
-    { key: 'FinishOne', value: FinishOne },
-    { key: 'FinishTwo', value: FinishTwo },
-    { key: 'FinishThree', value: FinishThree },
-    { key: 'FinishFour', value: FinishFour },
+    { key: 'FinishOne', value: FinishOne  , name : 'Glassy Finish' },
+    { key: 'FinishTwo', value: FinishTwo , name : 'Granite Finish' },
+    { key: 'FinishThree', value: FinishThree , name : 'Black Finish' },
+    { key: 'FinishFour', value: FinishFour , name : 'Marble Finish'  },
   ]);
   
   // Map Accessories
   export const Accessories = mapImages([
-    { key: 'CornerOne', value: CornerOne },
-    { key: 'LampOne', value: LampOne },
-    { key: 'LampTwo', value: LampTwo },
+    { key: 'LampOne', value: LampOne , name : 'Indian Lamp' },
+    { key: 'LampTwo', value: LampTwo , name : 'Modern Lamp'},
   ]);
   

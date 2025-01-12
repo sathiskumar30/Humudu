@@ -4,7 +4,7 @@ import { useContext } from "../../../Hooks/UseContext";
 
 const AddOnComponent = () => {
 
-    const { pageNumber , setPageNumber ,OptionsData } = useContext();
+    const { pageNumber , setPageNumber ,OptionsData , setEditwidthandHeight } = useContext();
 
     return (
 
@@ -38,7 +38,12 @@ const AddOnComponent = () => {
                                 outline: 'none'
                             }
                         }}
-                        onClick={()=>setPageNumber(index)}
+                        onClick={()=>{
+                            if(index !==0 ){
+                                setEditwidthandHeight(false);
+                            }
+                            setPageNumber(index)
+                        }} 
                     >
                         {item?.icon}
                     </IconButton>

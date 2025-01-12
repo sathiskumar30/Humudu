@@ -245,7 +245,6 @@ const SelectorComponent = () => {
     );
 };
 
-// Add PropTypes validation for SelectorComponent
 SelectorComponent.propTypes = {
     OptionsData: PropTypes.array.isRequired,
     pageNumber: PropTypes.number.isRequired,

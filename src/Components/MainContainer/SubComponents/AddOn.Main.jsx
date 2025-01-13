@@ -6,6 +6,9 @@ const AddOnComponent = () => {
 
     const { pageNumber , setPageNumber ,OptionsData , setEditwidthandHeight } = useContext();
 
+    {/* This component will shows you the different options for the Frame layout */}
+    {/* Displayed on the left side of the Frame...... */}
+
     return (
 
         <Grid

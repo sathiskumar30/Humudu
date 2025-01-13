@@ -60,28 +60,61 @@ export const ProviderContext = ({ children }) => {
   const [width, setWidth] = useState(25);
   const [height, setHeight] = useState(25);
 
-  const [ ShowingHeight , setShowingHeight ] = useState()
-  const [ ShowingWidth , setShowingWidth ] = useState()
+  const [ShowingHeight, setShowingHeight] = useState()
+  const [ShowingWidth, setShowingWidth] = useState()
+  const [FinallySelectedImage, setFinallySelectedImage] = useState([]);
+  const [TotalGodsCount, setTotalGodCount] = useState(3)
 
-  const [ FinallySelectedImage  , setFinallySelectedImage  ] = useState([]);
+  const [GodWidth, setGodWidth] = useState(25);
+  const [GodsDisplayWidth, setGodsDisplayWidth] = useState();
 
-  const [TotalGodsCount , setTotalGodCount ] = useState(3)
+  const [GodHeight, setGodHeight] = useState(25);
+  const [GodsDisplayHeight, setGodsDisplayHeight] = useState();
 
+  const [accWidth, setAccWidth] = useState(25);
+  const [accDisplayWidth, setAccDisplayWidth] = useState();
+
+  const [accHeight, setAccHeight] = useState(25);
+  const [accDisplayHeight, setAccDisplayHeight] = useState();
+
+  //This UseEffect will do the side Effect of the Frame..
   useEffect(() => {
 
-    const givenValuesInInches = width * 96 * 0.4 ;
+    const givenValuesInInches = width * 96 * 0.4;
 
-    const givenValues2InInches = height *  96 * 0.46 ;
+    const givenValues2InInches = height * 96 * 0.46;
 
-    const  displayHeight = 700 / 2325  * givenValuesInInches;
+    const displayHeight = 700 / 2325 * givenValuesInInches;
 
     const displayWidth = 300 / 480 * givenValues2InInches
-    
+
     setShowingHeight(displayHeight);
 
     setShowingWidth(displayWidth)
 
-  }, [width,height])
+  }, [width, height])
+
+  //This useEffect will do the side effect for the God Image and Accessiories Images.
+  useEffect(() => {
+
+    const godsWidthInInches = GodWidth * 96 * 0.4;
+    const accWidthInInches = accWidth * 96 * 0.4;
+
+    const godHeightInInches = GodHeight * 96 * 0.46;
+    const accHeightInInches = accHeight * 96 * 0.40;
+
+    const displayGodHeight = 700 / 2325 * godHeightInInches;
+    const displayAccHeight = 700 / 2325 * accHeightInInches;
+
+    const displayGodWidth = 300 / 480 * godsWidthInInches;
+    const displayAccWidth = 300 / 480 * accWidthInInches;
+
+    setGodsDisplayHeight(displayGodHeight);
+    setGodsDisplayWidth(displayGodWidth);
+    setAccDisplayWidth(displayAccWidth);
+    setAccDisplayHeight(displayAccHeight);
+
+  }, [GodHeight, GodWidth, accHeight, accWidth])
 
   const values = {
     OptionsData,
@@ -93,10 +126,18 @@ export const ProviderContext = ({ children }) => {
     WidHieData, setWidHieData,
     width, setWidth,
     height, setHeight,
-    ShowingHeight , setShowingHeight,
-    ShowingWidth , setShowingWidth,
-    FinallySelectedImage  , setFinallySelectedImage,
-    TotalGodsCount , setTotalGodCount
+    ShowingHeight, setShowingHeight,
+    ShowingWidth, setShowingWidth,
+    FinallySelectedImage, setFinallySelectedImage,
+    TotalGodsCount, setTotalGodCount,
+    GodWidth, setGodWidth,
+    GodsDisplayWidth, setGodsDisplayWidth,
+    GodHeight, setGodHeight,
+    GodsDisplayHeight, setGodsDisplayHeight,
+    accWidth, setAccWidth,
+    accDisplayWidth, setAccDisplayWidth,
+    accHeight, setAccHeight,
+    accDisplayHeight, setAccDisplayHeight
   };
 
   return (

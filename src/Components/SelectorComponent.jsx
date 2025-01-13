@@ -6,6 +6,8 @@ import { useContext } from "../Hooks/UseContext";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import { useDrag } from "react-dnd";
 
+//This is component is used to drag the image .
+//That will be fit into the Frame.....
 const DraggableGridItem = ({ item, index, AnotherValues, onClick, ITEM_TYPE }) => {
     const [{ isDragging }, drag] = useDrag(() => ({
         type: ITEM_TYPE,
@@ -150,6 +152,10 @@ const SelectorComponent = () => {
     };
 
     return (
+
+        // This Component shows the different types of images 
+        //Like Gods Images , Accessories Images , Finish Images
+        //All the selectable Images are rendered here only.
         <Grid
             sx={{
                 height: "100%",

@@ -16,10 +16,12 @@ function App() {
         <NavBar />
       </Grid>
 
+      {/* Main Component FRAME View.... */}
       <Grid height='62vh' width='100%' bgcolor='#c4c3d0'>
         <MainComponent />
       </Grid>
 
+      {/* Selected the Options Like Frame , background , Gods , Acccessories etc... */}
       <Grid height='30vh' width='100%' bgcolor='#c4c3d0'>
         <SelectorComponent />
       </Grid>

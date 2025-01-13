@@ -15,10 +15,12 @@ const FrameComponent = () => {
         ShowingWidth,
         FinallySelectedImage ,
         setFinallySelectedImage,
+        GodsDisplayWidth,GodsDisplayHeight,
+        accDisplayWidth,accDisplayHeight,
     } = useContext();
 
     const [droppedItems, setDroppedItems] = useState([]);
-    const count = 3 ; 
+    const count = 3 ;  //Try to Change this count to 1 and 2 for the Two Frame and one Frame ....
 
     const [ anyone , setAnyone ] = useState(null)
 
@@ -52,8 +54,8 @@ const FrameComponent = () => {
     };
       
 
+    {/* Main Container, which shows the output of the Photo Frame .... */}
     return (
-
     <Grid container xs={12} height="100%">
 
         <Grid
@@ -81,6 +83,7 @@ const FrameComponent = () => {
             justifyContent="center"
             alignItems="center"
         >
+            {/* Frame Component */}
             <Box
                 sx={{
                     display: "flex",
@@ -95,11 +98,12 @@ const FrameComponent = () => {
                     position: "relative",
                 }}
             >
+                {/* Finish Component */}
                 <Box
                     sx={{
                         width: ShowingWidth - ShowingWidth * 0.09,
                         height: ShowingHeight - ShowingHeight * 0.12,
-                        bgcolor: "yellow",
+                        bgcolor: "white",
                         textAlign: "center",
                         backgroundImage: `url(${FinishImages[finishNumber]?.src})`,
                         borderRadius: "2%",
@@ -134,11 +138,12 @@ const FrameComponent = () => {
                         return (
                             <React.Fragment key={`dropped-item-${index}`}>
                                 
+                                {/* God Images Component */}
                                 <Box
                                     ref={dropRef}
                                     sx={{
-                                        width: count === 1 ? "100%" : count === 2 ? "48%" : "30%",
-                                        height: "90%",
+                                        width: count === 1 ? GodsDisplayWidth : count === 2 ? GodsDisplayWidth : GodsDisplayWidth * 0.3,
+                                        height:GodsDisplayHeight-GodsDisplayHeight*0.2,
                                         borderRadius: "5px",
                                         backgroundImage: `url(${FinallySelectedImage[index]?.src})`,
                                         backgroundSize: "contain",
@@ -155,11 +160,12 @@ const FrameComponent = () => {
                                     onClick={() => setAnyone(index)} 
                                 />
 
+                                {/* Accessories Images Component */}
                                 {index < count - 1 && (
-                                    <Box
+                                    <Box  
                                         sx={{
-                                            width: "12%",
-                                            height: "100%",
+                                            width:accDisplayWidth / 5,
+                                            height:accDisplayHeight,
                                             borderRadius: "5px",
                                             backgroundImage: `url(${Accessories[accessoryNumber]?.src})`,
                                             backgroundSize: "cover",

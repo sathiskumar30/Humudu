@@ -35,18 +35,18 @@ const mapImages = (images) => {
   
   // Map Frame images
   export const FrameImages = mapImages([
-    { key: 'FrameTwo', value: FrameTwo , name : 'Formal Finish' },
-    { key: 'FrameThree', value: FrameThree , name : 'Plain Finish' },
-    { key: 'FrameFour', value: FrameFour ,  name : 'Wood Finish' },
-    { key: 'FrameFive', value: FrameFive , name : 'Classy Finish' },
+    { key: 'FrameTwo', value: FrameTwo , name : 'Formal' },
+    { key: 'FrameThree', value: FrameThree , name : 'Plain' },
+    { key: 'FrameFour', value: FrameFour ,  name : 'Wood' },
+    { key: 'FrameFive', value: FrameFive , name : 'Classy' },
   ]);
   
   // Map Finish images
   export const FinishImages = mapImages([
-    { key: 'FinishOne', value: FinishOne  , name : 'Glassy Finish' },
-    { key: 'FinishTwo', value: FinishTwo , name : 'Granite Finish' },
-    { key: 'FinishThree', value: FinishThree , name : 'Black Finish' },
-    { key: 'FinishFour', value: FinishFour , name : 'Marble Finish'  },
+    { key: 'FinishOne', value: FinishOne  , name : 'Glassy' },
+    { key: 'FinishTwo', value: FinishTwo , name : 'Granite' },
+    { key: 'FinishThree', value: FinishThree , name : 'Black' },
+    { key: 'FinishFour', value: FinishFour , name : 'Marble'  },
   ]);
   
   // Map Accessories
